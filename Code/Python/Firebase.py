@@ -6,14 +6,14 @@ import time
 
 # Firebase setup
 cred = credentials.Certificate(
-    "C:/Users/dhruv/Downloads/HandParalysisFirebase/hand-paralysis-project-firebase-adminsdk-fbsvc-530feedb4c.json"
+    "D:/Work/RFL/Hand Paralysis Project/FirebaseJSON/hand-paralysis-project-firebase-adminsdk-fbsvc-8b270fe4eb.json"
 )
 firebase_admin.initialize_app(cred, {
     "databaseURL": "https://hand-paralysis-project-default-rtdb.asia-southeast1.firebasedatabase.app/"
 })
 
 # CSV setup
-csv_file = "imu_data.csv"
+csv_file = "D:\Work\RFL\Hand Paralysis Project\imu_data.csv"
 if not os.path.isfile(csv_file):
     df = pd.DataFrame(columns=["timestamp", "pitch", "roll", "yaw"])
     df.to_csv(csv_file, index=False)
